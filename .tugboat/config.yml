@@ -33,7 +33,7 @@ services:
         # Link the document root to the expected path. This example links
         # /docroot to the docroot
         - composer install --prefer-dist --working-dir=build
-        - build/bin/phing -f build/phing/build.xml tests
+        - build/bin/phing -f build/phing/build.xml build
         - ln -snf "${TUGBOAT_ROOT}/docroot" "${DOCROOT}"
 
         - # Use the tugboat-specific Drupal settings

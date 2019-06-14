@@ -14,6 +14,9 @@ jobs:
       - run:
           name: Phing build
           command: build/bin/phing -f build/phing/build.xml build
+      - run:
+          name: Build
+          command: cat $DOCKER_USER
 workflows:
   version: 2
   main:
